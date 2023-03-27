@@ -25,7 +25,7 @@ namespace ImageOSINT
                     if (message.Photo != null && message.Photo.Length != 0)
                     {
                         var photo = await botClient.GetFileAsync(message.Photo.LastOrDefault().FileId);
-                        var url = "https://api.telegram.org/file/bot1859001518:AAEQ1Wer2AvfONoVvmT_IhbpO33_dDI-JNQ/" + photo.FilePath;
+                        var url = "https://api.telegram.org/file/bot{token}/" + photo.FilePath;
 
                         try
                         {
